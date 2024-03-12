@@ -1,0 +1,46 @@
+# Introduction
+
+This simple nodejs app is based on: https://github.com/cristiklein/node-hostname
+
+## Prerequisites
+
+For local development, please use npm and nodejs to run the app. If you wish to use Docker to build an image and run this app then make sure you have docker engine installed, following these instructons https://docs.docker.com/engine/install/
+
+## Local Development
+
+In order to test this app natively, clone this repo and navigate to the root folder before following these instructions. 
+
+Install dependencies:
+```
+npm install
+```
+
+then run the app:
+```
+npm run start
+```
+Open your browser and navigate to http://localhost:3000
+
+If you wish to use Docker then first build the image:
+
+```
+docker build . -t node-hostname-image
+```
+
+and then you can run it:
+
+```
+docker run -dit -p 12000:3000 --name node-hostname node-hostname-image
+```
+
+Navigate to http://localhost:12000
+
+To remove the running container:
+```
+docker rm node-hostname -f 
+```
+
+Remove the built docker image:
+```
+docker rmi node-hostname-image
+```
