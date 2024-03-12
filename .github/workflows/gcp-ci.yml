@@ -35,7 +35,6 @@ jobs:
 
       - name: Build image
         run: docker build . --tag ${{ env.REPOSITORY_LOCATION }}/node-hostname:$GITHUB_SHA --tag ${{ env.REPOSITORY_LOCATION }}/node-hostname
-        working-directory: WORKING_DIRECTORY
 
       - name: Push image
         run: docker push -a ${{ env.REPOSITORY_LOCATION }}/node-hostname
