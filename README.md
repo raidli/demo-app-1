@@ -59,4 +59,4 @@ If you want to see these environment specific manifests, navigate to `kubernetes
 
 If you want to apply these manifests to your own cluster then simply run `kubectl apply -k .` Just make sure to change the container image location in the Deployment to reflect your own image repository setup. Also make sure to change the `ingress-patch.yml` in order to use your own domain. Once the domain is changed, make sure the appropriate DNS A records are also pointing to the LB IP of the GKE cluster.
 
-The `app` namespace is currently configured in the infrastructure repository (https://github/raidli/demo-app-1-infrastructure) to facilitate the use of ArgoCD.
+The `app` namespace is currently configured in the infrastructure repository (https://github.com/raidli/demo-app-1-infrastructure) to facilitate the use of ArgoCD.
