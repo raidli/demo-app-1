@@ -1,0 +1,14 @@
+- op: add
+  path: /spec/rules/0/host
+  value: case-study.dev.lillepold.net
+
+- op: add
+  path: /metadata/annotations/cert-manager.io~1cluster-issuer
+  value: letsencrypt-prod
+
+- op: add
+  path: /spec/tls
+  value:
+    - hosts:
+        - case-study.dev.lillepold.net
+      secretName: app-cert
