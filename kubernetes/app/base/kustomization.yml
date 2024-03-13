@@ -7,7 +7,6 @@ commonLabels:
   app: app
 
 resources:
-  - namespace.yml
   - deployment.yml
   - ingress.yml
   - service.yml
