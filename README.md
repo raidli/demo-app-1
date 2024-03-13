@@ -4,6 +4,8 @@ This simple nodejs app is based on: https://github.com/cristiklein/node-hostname
 
 There is a simple CI pipeline created using Github Actions to build the Docker image and push it to Google Cloud Artifact Registry.
 
+CD portion is handled by ArgoCD (https://github/raidli/demo-app-1-infrastructure)
+
 For running a sample GKE Autopilot cluster, please refer to https://github.com/raidli/demo-app-1-infrastructure
 
 ## Prerequisites
@@ -55,4 +57,6 @@ Kustomize is used to create the app manifests for different environments. These 
 
 If you want to see these environment specific manifests, navigate to `kubernetes/envs/gcp/europe-north1/dev/app` and run either `kustomize build` or `kubectl kustomize` and it will generate all the manifests for you in your terminal.
 
-If you want to apply these manifests to your own cluster then simply run `kubectl apply -k .` Just make sure to change the container image location in the Deployment to reflect your own image repository setup.
+If you want to apply these manifests to your own cluster then simply run `kubectl apply -k .` Just make sure to change the container image location in the Deployment to reflect your own image repository setup. Also make sure to change the `ingress-patch.yml` in order to use your own domain.
+
+The `app` namespace is currently configured in the infrastructure repository (https://github/raidli/demo-app-1-infrastructure) to facilitate the use of ArgoCD.
