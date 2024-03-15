@@ -4,7 +4,7 @@ This simple nodejs app is based on: https://github.com/cristiklein/node-hostname
 
 There is a simple CI pipeline created using Github Actions to build the Docker image and push it to Google Cloud Artifact Registry.
 
-CD portion is handled by ArgoCD (https://github/raidli/demo-app-1-infrastructure)
+CD portion is handled by ArgoCD (https://github.com/raidli/demo-app-1-infrastructure)
 
 For running a sample GKE Autopilot cluster, please refer to https://github.com/raidli/demo-app-1-infrastructure
 
